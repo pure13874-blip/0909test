@@ -291,19 +291,18 @@
 
     .profile-placeholder {
       min-height: 620px;
-      border: 1px dashed #9a9a94;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
       border-radius: 26px;
-      background:
-        linear-gradient(135deg, transparent 0 49.5%, var(--line) 50% 50.5%, transparent 51%),
-        linear-gradient(45deg, transparent 0 49.5%, var(--line) 50% 50.5%, transparent 51%),
-        var(--soft);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: var(--muted);
-      font-size: 14px;
-      padding: 30px;
+      background: var(--soft);
+    }
+
+    .profile-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
     }
 
     /* About */
@@ -595,7 +594,9 @@
       }
 
       .profile-placeholder {
-        aspect-ratio: 16 / 9;
+        width: min(100%, 576px);
+        justify-self: center;
+        aspect-ratio: 4 / 5;
       }
 
       .timeline-item {
@@ -778,10 +779,9 @@
           </div>
         </div>
 
-        <div class="profile-placeholder">
-          PROFILE / PERSONAL VISUAL PLACEHOLDER<br>
-          실제 프로필 사진 또는 개인 브랜딩 그래픽 삽입 영역
-        </div>
+        <figure class="profile-placeholder">
+          <img src="assets/profile.jpg" alt="정장을 입은 홍준호의 프로필 사진" />
+        </figure>
       </div>
     </section>
 
